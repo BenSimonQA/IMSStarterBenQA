@@ -1,7 +1,10 @@
-Coverage: 34%
-# Project Title
+Coverage: 84.3%
+# IMS-Starter
 
-One Paragraph of project description goes here
+IMS-Starter Project is a projected that allows a user to control their inventory. 
+It allows the user to control all their customers data, orders as well as items.
+This includes adding, deleting and updating.
+The project is programmed in Java and uses GCP SQL to store the data and it does teh testing using Junit and Mockito.
 
 ## Getting Started
 
@@ -9,40 +12,46 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
+To get the project running you must install java into your computer as well as maven.
 ```
-Give examples
+Install Java (jdk14): https://docs.oracle.com/en/java/javase/12/install/installation-jdk-microsoft-windows-platforms.html#GUID-A7E27B90-A28D-4237-9383-A58B416071CA
+Install for Maven: https://mkyong.com/maven/how-to-install-maven-in-windows/ 
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To get the project running at first you must clone the repository to a local folder. Then you must install maven and initialise the porject.
 
 ```
-Give the example
+git clone
+mvn clean install
+mvn clean package
+java -jar ims-0.0.1-jar-with-dependencies.jar
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+If you have any IDE installed such as Eclipse you can click on a project and run "Coverage As" then "Junit" and it will test all the tests.
+Or you can go into the CMD and run "mvn clean install".
+The test go through all DAOs that have been made "CustomerDAO" "OrderDAO" and "ItemDAO", there is also a test for failures.
+So if they cannot connect it will test that it will give the right output.
+There is also test that covers all the controllers.
+These test makes sure that the programme is fully functional and thet the user can add, delete or update.
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+All tests are stored in src/test/java in the package com.qa.ims
 
 ```
-Give an example
+CustomerDAOTest.java
+CustomerDAOTestFail.java
+ItemDAOTest.java
+ItemDAOTestFail.java
+OrderDAOTest.java
+OrderDAOTestFail.java
+CustomerControllerTest.java
+OrderControllerTest.java
+ItemControllerTest.java
 ```
 
 ### Integration Tests 
