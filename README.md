@@ -83,7 +83,7 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+* **Benjamin Simon** - *Initial work* - [benjaminsimon](https://github.com/BenSimonQA)
 
 ## License
 
